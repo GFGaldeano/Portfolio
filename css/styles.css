@@ -1,0 +1,514 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: white;
+    background-color: #121212;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Video de fondo */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos del menú */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, .active {
+    color: #ffcc00;
+}
+
+/* Sección de perfil */
+.perfil-container {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.perfil-foto {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.perfil-nombre {
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    margin-top: 10px;
+    color: #ffcc00;
+}
+
+/* Secciones */
+main {
+    margin-top: 80px;
+    padding: 50px;
+}
+
+section {
+    padding: 50px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: white;
+    background-color: #121212;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Experiencia Tech */
+#experiencia {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+#experiencia h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+#experiencia p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #ddd;
+}
+
+/* Tecnologías */
+#tecnologias {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#tecnologias h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tech-list span {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ddd;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.tech-list span:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* Proyectos */
+#proyectos {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#proyectos h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    width: 250px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.project-card .overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .overlay-text {
+    transform: translateY(0);
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Botón de descarga de CV */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #ffcc00;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #e6b800;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #ffcc00;
+}
+
+.footer-link svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    transition: fill 0.3s;
+}
+
+.footer-link:hover svg {
+    fill: #ffcc00;
+}
+/* Experiencia Tech */
+#experiencia {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+#experiencia h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+#experiencia p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    color: #ddd;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    color: white;
+    background-color: #121212;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Experiencia Tech */
+#experiencia {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#experiencia h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+/* Tecnologías */
+#tecnologias {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#tecnologias h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+/* Proyectos */
+#proyectos {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#proyectos h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+/* Educación */
+#educacion {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#educacion h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+/* Carrusel de Educación */
+.educacion-container {
+    position: relative;
+    max-width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.educacion-slide {
+    display: flex;
+    width: 100%; /* Dependerá del número de imágenes */
+    transition: transform 1s ease-in-out;
+}
+
+.educacion-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 10px;
+}
+
+/* Sección CV */
+#cv {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#cv h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+.cv-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.cv-container .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #ffcc00;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cv-container .btn:hover {
+    background: #e6b800;
+}
+
